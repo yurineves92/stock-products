@@ -37,10 +37,6 @@
 		            	<input type="text" name="name" class="form-control" placeholder="Nome...">
 		            </div>
 		            <div class="form-group">
-		            	<label for="descricao">Descrição</label>
-		            	<input type="text" name="description" class="form-control" placeholder="Descrição...">
-		            </div>
-		            <div class="form-group">
 		            	<button class="btn btn-primary" type="submit">Salvar</button>
 		            	<a href="/categories" class="btn btn-default">Cancelar</a>
 		            </div>
