@@ -56,37 +56,20 @@
             		
             	</div>
 
-            		
-            	
-            	<div class="col-lg-6 col-sm-6 col-xs-12">
-            		<div class="form-group">
-	            	<label for="codigo">Código</label>
-	            	<input type="number" name="code" required value="{{old('code')}}" class="form-control" placeholder="Código do Produto...">
-	            	</div>
-            		
-            	</div>
-            		
-            	<div class="col-lg-6 col-sm-6 col-xs-12">
-            		<div class="form-group">
-	            	<label for="estoque">Estoque</label>
-	            	<input type="text" name="amount" required value="{{old('amount')}}" class="form-control" placeholder="Estoque...">
-	            	</div>	
-            		
-            	</div>
+                <div class="col-lg-6 col-sm-6 col-xs-12">
+                      <div class="form-group">
+                          <label for="estoque">Estoque mínimo</label>
+                          <input type="number" name="min_stock" required value="{{old('min_stock')}}" class="form-control" placeholder="Estoque mínimo...">
+                      </div>      
+                </div>
 
-            	<div class="col-lg-6 col-sm-6 col-xs-12">
-            		<div class="form-group">
-            	           <label for="descricao">Descrição</label>
-            	           <input type="text" name="description" class="form-control" placeholder="Descrição...">
-            		</div>
-            	</div>
+                <div class="col-lg-6 col-sm-6 col-xs-12">
+                      <div class="form-group">
+                          <label for="estoque">Estoque máximo</label>
+                          <input type="number" name="max_stock" required value="{{old('max_stock')}}" class="form-control" placeholder="Estoque mínimo...">
+                      </div>      
+                </div>
 
-            	<div class="col-lg-6 col-sm-6 col-xs-12">
-            		 <div class="form-group">
-            	           <label for="imagem">Imagem</label>
-            	           <input type="file" name="image" class="form-control">
-            		</div>
-            	</div>
             </div>
 
             <div class="form-group">

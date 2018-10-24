@@ -163,6 +163,16 @@
           </ul>
         </li>
         <li>
+          <a href="/contact">
+            <i class="fa fa-question-circle"></i> <span>Contato</span>
+          </a>
+        </li>
+        <li>
+          <a href="/contact">
+            <i class="fa fa-group"></i> <span>Suporte</span>
+          </a>
+        </li>
+        <li>
           <a href="/help">
             <i class="fa fa-plus-square"></i> <span>Ajuda</span>
             <small class="label pull-right bg-red">PDF</small>

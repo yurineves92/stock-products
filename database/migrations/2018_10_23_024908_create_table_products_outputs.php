@@ -19,10 +19,10 @@ class CreateTableProductsOutputs extends Migration
             $table->string('note',255);
             $table->integer('type_movement');
             $table->datetime('date_output');
+            $table->integer('product_id')->unsigned();
+            $table->foreign('product_id')->references('id')->on('products');
             $table->integer('client_id')->unsigned();
             $table->foreign('client_id')->references('id')->on('clients');
-            $table->integer('supplier_id')->unsigned();
-            $table->foreign('supplier_id')->references('id')->on('suppliers');
             $table->timestamps();
         });
     }

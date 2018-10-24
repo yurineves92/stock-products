@@ -4,21 +4,20 @@
 	<br>
 	<ol class="breadcrumb">
 	  <li><a href="/"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-	  <li class="active"><i class="fa fa-plus-circle"></i> Produtos</li>
+	  <li class="active"><i class="fa fa-plus-circle"></i> Clientes</li>
 	</ol>
 </section>
 <section class="content">
 	<div class="box box-default">
-	<div class="row">
-		<div class="box-header with-border">
-			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-				<h3>Lista de Produtos <a href="products/create"><button class="btn btn-primary">Novo</button></a></h3>
-				@include('products.search')
+		<div class="row">
+			<div class="box-header with-border">
+				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+					<h3>Lista de Clientes <a href="clients/create"><button class="btn btn-primary">Novo</button></a></h3>
+					@include('clients.search')
+				</div>
 			</div>
 		</div>
-	</div>
-
-	<div class="box-body">
+		<div class="box-body">
 		@if ($message = Session::get('alert-success'))
 	      	<div class="alert alert-success alert-block">
 	        	<button type="button" class="close" data-dismiss="alert">X</button> 
@@ -29,7 +28,7 @@
 	        	<button type="button" class="close" data-dismiss="alert">X</button> 
 	            	<strong>{{ $message }}</strong>
 	      	</div>
-	     @endif
+	    @endif
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div class="table-responsive">
@@ -37,31 +36,33 @@
 						<thead>
 							<th>ID</th>
 							<th>Nome</th>
-							<th>Categoria</th>
-							<th>Estoque Mínimo</th>
-							<th>Estoque Máximo</th>
+							<th>Email</th>
+							<th>Telefone</th>
+							<th>Endereço</th>
+							<th>CPF</th>
 							<th>Opções</th>
 						</thead>
-		               @foreach ($products as $p)
+		               @foreach ($clients as $c)
 						<tr>
-							<td>{{ $p->id}}</td>
-							<td>{{ $p->name}}</td>
-							<td>{{ $p->category->name}}</td>
-							<td>{{ $p->min_stock}}</td>
-							<td>{{ $p->max_stock}}</td>
+							<td>{{ $c->id}}</td>
+							<td>{{ $c->name}}</td>
+							<td>{{ $c->email}}</td>
+							<td>{{ $c->phone}}</td>
+							<td>{{ $c->address}}</td>
+							<td>{{ $c->cpf}}</td>
 							<td>
-								<a href="{{URL::action('ProductsController@edit',$p->id)}}"><button class="btn btn-info">Editar</button></a>
-		                         <a href="" data-target="#modal-delete-{{$p->id}}" data-toggle="modal"><button class="btn btn-danger">Excluir</button></a>
+								<a href="{{URL::action('ClientsController@edit',$c->id)}}"><button class="btn btn-info">Editar</button></a>
+		                         <a href="" data-target="#modal-delete-{{$c->id}}" data-toggle="modal"><button class="btn btn-danger">Excluir</button></a>
 							</td>
 						</tr>
-						@include('products.modal')
+						@include('clients.modal')
 						@endforeach
 					</table>
 				</div>
-				{{$products->render()}}
+				{{$clients->render()}}
 			</div>
 		</div>
-	</div>
+		</div>
 	</div>
 </section>
 @stop

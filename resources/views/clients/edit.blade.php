@@ -4,7 +4,7 @@
       <br>
       <ol class="breadcrumb">
         <li><a href="/"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li><a href="/suppliers"><i class="fa fa-plus-circle"></i> Fornecedores</a></li>
+        <li><a href="/clients"><i class="fa fa-plus-circle"></i> Clientes</a></li>
         <li class="active"><i class="fa fa-plus"></i> Formulário</li>
       </ol>
 </section>
@@ -32,51 +32,51 @@
                   </div>
             </div>
 
-	     {!!Form::model($supplier, ['method'=>'PATCH', 'route'=>['suppliers.update', $supplier->id]])!!}
+	     {!!Form::model($client, ['method'=>'PATCH', 'route'=>['suppliers.update', $client->id]])!!}
 	     {{Form::token()}}
 
             <div class="row">
                   <div class="col-lg-6 col-sm-6 col-xs-12">
                         <div class="form-group">
                             <label for="nome">Nome</label>
-                            <input type="text" name="name" required value="{{ $supplier->name }}" class="form-control" placeholder="Nome...">
+                            <input type="text" name="name" required value="{{ $client->name }}" class="form-control" placeholder="Nome...">
                         </div>
                   </div>
                   
                   <div class="col-lg-6 col-sm-6 col-xs-12">
                        <div class="form-group">
                              <label for="email">Email</label>
-                             <input type="text" name="email" class="form-control" value="{{ $supplier->email }}" placeholder="Email...">
+                             <input type="text" name="email" class="form-control" value="{{ $client->email }}" placeholder="Email...">
                         </div>
                   </div>
                   
                   <div class="col-lg-6 col-sm-6 col-xs-12">
                          <div class="form-group">
                               <label for="telefone">Telefone</label>
-                              <input type="text" name="phone" class="form-control" value="{{ $supplier->phone }}" placeholder="Telefone...">
+                              <input type="text" name="phone" class="form-control" value="{{ $client->phone }}" placeholder="Telefone...">
                         </div>
                   </div>
 
                   <div class="col-lg-6 col-sm-6 col-xs-12">
                         <div class="form-group">
                             <label for="endereco">Endereço</label>
-                            <input type="text" name="address" required value="{{ $supplier->address }}" class="form-control" placeholder="Endereço...">
+                            <input type="text" name="address" required value="{{ $client->address }}" class="form-control" placeholder="Endereço...">
                         </div>      
                   </div>
 
                   <div class="col-lg-6 col-sm-6 col-xs-12">
                         <div class="form-group">
                             <label for="endereco">CNPJ</label>
-                            <input type="text" name="cnpj" required value="{{ $supplier->cnpj }}" class="form-control" placeholder="CNPJ do Fornecedor...">
+                            <input type="text" name="cpf" required value="{{ $client->cpf }}" class="form-control" placeholder="CPF do Cliente...">
                         </div>      
                   </div>
             </div>
 
             <div class="form-group">
             	<button class="btn btn-primary" type="submit">Salvar</button>
-            	<a href="/suppliers" class="btn btn-default">Cancelar</a>
+            	<a href="/clients" class="btn btn-default">Cancelar</a>
             </div>
-		{!!Form::close()!!}
+		  {!!Form::close()!!}
       </div>
       </div>
 </section>		

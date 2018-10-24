@@ -36,22 +36,20 @@
 						<thead>
 							<th>ID</th>
 							<th>Nome</th>
-							<th>Tipo Documento</th>
-							<th>Número Documento</th>
-							<th>Endereço</th>
-							<th>Telefone</th>
 							<th>Email</th>
+							<th>Telefone</th>
+							<th>Endereço</th>
+							<th>CNPJ</th>
 							<th>Opções</th>
 						</thead>
 		               @foreach ($suppliers as $s)
 						<tr>
 							<td>{{ $s->id}}</td>
 							<td>{{ $s->name}}</td>
-							<td>{{ $s->document_type}}</td>
-							<td>{{ $s->document_number}}</td>
-							<td>{{ $s->address}}</td>
-							<td>{{ $s->phone}}</td>
 							<td>{{ $s->email}}</td>
+							<td>{{ $s->phone}}</td>
+							<td>{{ $s->address}}</td>
+							<td>{{ $s->cnpj}}</td>
 							<td>
 								<a href="{{URL::action('SuppliersController@edit',$s->id)}}"><button class="btn btn-info">Editar</button></a>
 		                         <a href="" data-target="#modal-delete-{{$s->id}}" data-toggle="modal"><button class="btn btn-danger">Excluir</button></a>

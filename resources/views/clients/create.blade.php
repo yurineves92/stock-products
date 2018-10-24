@@ -4,7 +4,7 @@
       <br>
       <ol class="breadcrumb">
         <li><a href="/"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li><a href="/suppliers"><i class="fa fa-plus-circle"></i> Fornecedores</a></li>
+        <li><a href="/clientes"><i class="fa fa-plus-circle"></i> Clientes</a></li>
         <li class="active"><i class="fa fa-plus"></i> Formulário</li>
       </ol>
 </section>
@@ -32,7 +32,7 @@
       		</div>
       	</div>
 
-	      {!!Form::open(array('url'=>'suppliers','method'=>'POST','autocomplete'=>'off'))!!}
+	      {!!Form::open(array('url'=>'clients','method'=>'POST','autocomplete'=>'off'))!!}
             {{Form::token()}}
       
             <div class="row">
@@ -66,15 +66,15 @@
 
                   <div class="col-lg-6 col-sm-6 col-xs-12">
                         <div class="form-group">
-                            <label for="endereco">CNPJ</label>
-                            <input type="text" name="cnpj" required value="{{old('cnpj')}}" class="form-control" placeholder="CNPJ do Fornecedor...">
+                            <label for="endereco">CPF</label>
+                            <input type="text" name="cpf" required value="{{old('cpf')}}" class="form-control" placeholder="CPF do cliente...">
                         </div>      
                   </div>
             </div>
             
             <div class="form-group">
             	<button class="btn btn-primary" type="submit">Salvar</button>
-            	<a href="/suppliers" class="btn btn-default">Cancelar</a>
+            	<a href="/clients" class="btn btn-default">Cancelar</a>
             </div>
 		{!!Form::close()!!}
       </div>
