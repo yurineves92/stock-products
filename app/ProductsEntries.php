@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProductsEntries extends Model
 {
-    protected $fillable = ['amount','note','type_document','date_entry','supplier_id','product_id'];
+    protected $fillable = ['amount','note','type_movement','date_entry','supplier_id','product_id'];
 
-    public function suppliers(){
+    public function supplier(){
         return $this->belongsTo('App\Suppliers');
     }
-    public function products(){
+    public function product(){
         return $this->belongsTo('App\Products');
     }
 }

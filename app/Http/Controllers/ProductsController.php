@@ -38,7 +38,7 @@ class ProductsController extends Controller
     public function update($id){
         $params = Request::all();
         $product = Products::findOrFail($id);
-        $product->save();
+        $product->update($params);
         Session::flash('alert-success', 'Produto atualizado com sucesso!');
         return redirect()->action("ProductsController@index");
     }

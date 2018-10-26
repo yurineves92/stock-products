@@ -20,5 +20,5 @@ Route::resource('/products', 'ProductsController');
 Route::resource('/clients', 'ClientsController');
 Route::resource('/suppliers', 'SuppliersController');
 Route::resource('/products_entries', 'ProductsEntriesController');
-Route::resource('/products_suppliers', 'ProductsSuppliersController');
+Route::resource('/products_outputs', 'ProductsOutputsController');
 Route::resource('/reports','ReportsController');

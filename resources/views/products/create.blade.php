@@ -32,7 +32,7 @@
 
             	</div>
             </div>
-		{!!Form::open(array('url'=>'products','method'=>'POST','autocomplete'=>'off', 'files'=>'true'))!!}
+		        {!!Form::open(array('url'=>'products','method'=>'POST','autocomplete'=>'off', 'files'=>'true'))!!}
             {{Form::token()}}
             <div class="row">
             	<div class="col-lg-6 col-sm-6 col-xs-12">

@@ -18,7 +18,7 @@ class CreateTableProductsEntries extends Migration
             $table->integer('amount');
             $table->string('note',255);
             $table->integer('type_movement');
-            $table->datetime('date_entry');
+            $table->date('date_entry');
             $table->integer('product_id')->unsigned();
             $table->foreign('product_id')->references('id')->on('products');
             $table->integer('supplier_id')->unsigned();
