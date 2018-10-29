@@ -198,7 +198,7 @@
   <footer class="main-footer">
     <!-- To the right -->
     <div class="pull-right hidden-xs">
-      Sistema de fidelidade
+      Sistema de Estoque Simples
     </div>
     <!-- Default to the left -->
     <strong>Copyright &copy; 2018 <a href="#">Yuri Neves</a>.</strong> Todos direitos reservados.

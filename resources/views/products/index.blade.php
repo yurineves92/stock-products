@@ -40,6 +40,7 @@
 							<th>Categoria</th>
 							<th>Estoque Mínimo</th>
 							<th>Estoque Máximo</th>
+							<th>Total de Estoque</th>
 							<th>Opções</th>
 						</thead>
 		               @foreach ($products as $p)
@@ -49,6 +50,7 @@
 							<td>{{ $p->category->name}}</td>
 							<td>{{ $p->min_stock}}</td>
 							<td>{{ $p->max_stock}}</td>
+							<td>{{ $p->amount }}</td>
 							<td>
 								<a href="{{URL::action('ProductsController@edit',$p->id)}}"><button class="btn btn-info">Editar</button></a>
 		                         <a href="" data-target="#modal-delete-{{$p->id}}" data-toggle="modal"><button class="btn btn-danger">Excluir</button></a>

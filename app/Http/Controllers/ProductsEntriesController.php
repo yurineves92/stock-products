@@ -23,6 +23,9 @@ class ProductsEntriesController extends Controller
 
     public function store(){
     	$params = Request::all();
+        $product = Products::find($params['product_id']);
+        $product->amount += $params['amount'];
+        $product->save();
     	$products_entries = new ProductsEntries($params);
     	$products_entries->save();
     	Session::flash('alert-success', 'Entrada de produto criado com sucesso!');
@@ -37,14 +40,29 @@ class ProductsEntriesController extends Controller
 
     public function update($id){
         $params = Request::all();
+        $product = Products::find($params['product_id']);
         $products_entries = ProductsEntries::findOrFail($id);
+        //Regra para controle e estoque
+        //Se quantidade for maior que a última entrada
+        if($params['amount'] > $products_entries['amount']) {
+            $new = $products_entries['amount'] - $params['amount'];
+            $product['amount'] -= $new;
+        } else if($params['amount'] < $products_entries['amount']) {
+            $new = $products_entries['amount'] - $params['amount'];
+            $product['amount'] -= $new;
+        }
+        $product->save();
         $products_entries->update($params);
         Session::flash('alert-success', 'Entrada de produto atualizado com sucesso!');
         return redirect()->action("ProductsEntriesController@index");
     }
 
     public function destroy($id){
-        $products_entries = ProductsEntries::findOrFail($id)->delete();
+        $products_entries = ProductsEntries::findOrFail($id);
+        $product = Products::find($products_entries['product_id']);
+        $product['amount'] -= $products_entries['amount'];
+        $product->save();
+        $products_entries->delete();
         Session::flash('alert-success', 'Entrada de produto removido com sucesso!');
         return redirect()->action("ProductsEntriesController@index");
     }

@@ -23,6 +23,13 @@ class ProductsOutputsController extends Controller
 
     public function store(){
     	$params = Request::all();
+        $product = Products::find($params['product_id']);
+        if($params['amount'] > $product['amount']) {
+            Session::flash('alert-danger', 'Quantidade é maior que a quantidade atual do estoque, ou estoque está zerado!');
+            return redirect()->action("ProductsOutputsController@create");
+        }
+        $product->amount -= $params['amount'];
+        $product->save();
     	$products_outputs = new ProductsOutputs($params);
     	$products_outputs->save();
     	Session::flash('alert-success', 'Saída de produto criado com sucesso!');
@@ -44,7 +51,11 @@ class ProductsOutputsController extends Controller
     }
 
     public function destroy($id){
-        $products_outputs = ProductsOutputs::findOrFail($id)->delete();
+        $products_outputs = ProductsOutputs::findOrFail($id);
+        $product = Products::find($products_outputs['product_id']);
+        $product['amount'] += $products_outputs['amount'];
+        $product->save();
+        $products_outputs->delete();
         Session::flash('alert-success', 'Saída de produto removido com sucesso!');
         return redirect()->action("ProductsOutputsController@index");
     }

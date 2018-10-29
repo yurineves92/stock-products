@@ -69,35 +69,35 @@
                           <option value="4">Ordem de Serviço</option>
                           <option value="5">Troca</option>
                           <option value="6">Nota Fiscal</option>
-                        @elseif($$products_outputs->type_movement == 2)
+                        @elseif($products_outputs->type_movement == 2)
                           <option value="1">Venda</option>
                           <option value="2" selected>Consumo Interno</option>
                           <option value="3">Devolução</option>
                           <option value="4">Ordem de Serviço</option>
                           <option value="5">Troca</option>
                           <option value="6">Nota Fiscal</option>
-                        @elseif($$products_outputs->type_movement == 3)
+                        @elseif($products_outputs->type_movement == 3)
                           <option value="1">Venda</option>
                           <option value="2">Consumo Interno</option>
                           <option value="3" selected>Devolução</option>
                           <option value="4">Ordem de Serviço</option>
                           <option value="5">Troca</option>
                           <option value="6">Nota Fiscal</option>
-                        @elseif($$products_outputs->type_movement == 4)
+                        @elseif($products_outputs->type_movement == 4)
                           <option value="1">Venda</option>
                           <option value="2">Consumo Interno</option>
                           <option value="3">Devolução</option>
                           <option value="4" selected>Ordem de Serviço</option>
                           <option value="5">Troca</option>
                           <option value="6">Nota Fiscal</option>
-                        @elseif($$products_outputs->type_movement == 5)
+                        @elseif($products_outputs->type_movement == 5)
                           <option value="1">Venda</option>
                           <option value="2">Consumo Interno</option>
                           <option value="3">Devolução</option>
                           <option value="4">Ordem de Serviço</option>
                           <option value="5" selected>Troca</option>
                           <option value="6">Nota Fiscal</option>
-                        @elseif($$products_outputs->type_movement == 6)
+                        @elseif($products_outputs->type_movement == 6)
                           <option value="1">Venda</option>
                           <option value="2">Consumo Interno</option>
                           <option value="3">Devolução</option>

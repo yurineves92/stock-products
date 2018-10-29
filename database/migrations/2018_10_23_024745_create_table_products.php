@@ -19,6 +19,7 @@ class CreateTableProducts extends Migration
             $table->integer('total_amount');
             $table->integer('min_stock');
             $table->integer('max_stock');
+            $table->integer('amount')->default('0');
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
