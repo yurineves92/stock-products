@@ -140,7 +140,7 @@
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-list-alt"></i>
+            <i class="fa fa-bar-chart"></i>
             <span>Relatórios</span>
              <i class="fa fa-angle-left pull-right"></i>
           </a>
@@ -148,7 +148,7 @@
             <li><a href="/reports/products_entries"><i class="fa fa-circle-o"></i> Entradas</a></li>
             <li><a href="/reports/products_outputs"><i class="fa fa-circle-o"></i> Saídas</a></li>
             <li><a href="/reports/products"><i class="fa fa-circle-o"></i> Produtos</a></li>
-            <li><a href="/reports/products_suppliers"><i class="fa fa-circle-o"></i> Por Fornecedores</a></li>
+            <li><a href="/reports/suppliers"><i class="fa fa-circle-o"></i> Por Fornecedores</a></li>
           </ul>
         </li>
         <li class="treeview">

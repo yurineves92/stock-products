@@ -21,4 +21,11 @@ Route::resource('/clients', 'ClientsController');
 Route::resource('/suppliers', 'SuppliersController');
 Route::resource('/products_entries', 'ProductsEntriesController');
 Route::resource('/products_outputs', 'ProductsOutputsController');
-Route::resource('/reports','ReportsController');
+
+//Relatórios
+Route::get('/reports/products_entries','ReportsController@products_entries');
+Route::get('/reports/products_outputs','ReportsController@products_outputs');
+Route::get('/reports/products','ReportsController@products');
+Route::get('/reports/suppliers','ReportsController@suppliers');
+
+Route::post('/pdf/products_entries','ReportsController@pdf_products_entries');
