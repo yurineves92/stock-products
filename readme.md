@@ -22,7 +22,7 @@ Agora só criar o usuário e acessar o sistema.
 
 # Funcionalidades do sistema
 
-O sistema consiste em utilizar seguintes telas
+## O sistema consiste em utilizar seguintes telas
 
 * Formulário de cadastro e edição.
 * Listagem com filtros.
@@ -30,7 +30,6 @@ O sistema consiste em utilizar seguintes telas
 * Restrição para acessar o sistema.
 * Formulário de contato para enviar email.
 * Migrações para controle da estrutura do banco de dados.
-* 
 
 ### Clientes
 
