@@ -22,6 +22,13 @@ class SuppliersController extends Controller
     public function store(){
     	$params = Request::all();
     	$supplier = new Suppliers($params);
+        $suppliers = Suppliers::all();
+        foreach($suppliers as $s){
+            if($s['cnpj'] == $params['cnpj']){
+                Session::flash('alert-danger', 'CNPJ Existente no banco de dados!');
+                return redirect()->action("SuppliersController@index"); 
+            }
+        }
     	$supplier->save();
     	Session::flash('alert-success', 'Fornecedor criado com sucesso!');
     	return redirect()->action("SuppliersController@index");

@@ -7,22 +7,21 @@
                   <h3 class="box-title">Relatório de produtos por fornecedor</b></h3>
       	</div>
       <div class="box-body">
-      	<form action="/pdf/suppliers" method="GET">
+      	<form action="/pdf/suppliers" method="POST" target="_blank">
+            {{Form::token()}}
 	     	<div class="row">
-            	<div class="col-lg-4 col-sm-4 col-xs-12">
-            		<div class="form-group">
-            		 	<label>De:</label>
-            		 	<input type="date" name="date_initial" required class="form-control" placeholder="Selecione...">
-            		</div>
-            	</div>
-
-            	<div class="col-lg-4 col-sm-4 col-xs-12">
-            		<div class="form-group">
-            		 	<label>Até:</label>
-            		 	<input type="date" name="date_final" required class="form-control" placeholder="Selecione...">
-            		</div>
-            	</div>
-
+                  <div class="col-lg-4 col-sm-4 col-xs-12">
+                        <div class="form-group">
+                              <label>De:</label>
+                              <input type="date" name="date_initial" required class="form-control" placeholder="Selecione...">
+                        </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-4 col-xs-12">
+                        <div class="form-group">
+                              <label>Até:</label>
+                              <input type="date" name="date_final" required class="form-control" placeholder="Selecione...">
+                        </div>
+                  </div>
                   <div class="col-lg-4 col-sm-4 col-xs-12">
                         <div class="form-group">
                               <label>Fornecedor:</label>

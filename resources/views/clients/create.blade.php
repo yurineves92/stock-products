@@ -43,19 +43,19 @@
 	            	</div>
             	</div>
             	
-                  <div class="col-lg-6 col-sm-6 col-xs-12">
-                       <div class="form-group">
-                             <label for="email">Email</label>
-                             <input type="text" name="email" class="form-control" placeholder="Email...">
-                        </div>
-                  </div>
-                  
-                  <div class="col-lg-6 col-sm-6 col-xs-12">
-                         <div class="form-group">
-                              <label for="telefone">Telefone</label>
-                              <input type="text" name="phone" class="form-control" placeholder="Telefone...">
-                        </div>
-                  </div>
+              <div class="col-lg-6 col-sm-6 col-xs-12">
+                   <div class="form-group">
+                         <label for="email">Email</label>
+                         <input type="text" name="email" class="form-control" placeholder="Email...">
+                    </div>
+              </div>
+              
+              <div class="col-lg-6 col-sm-6 col-xs-12">
+                     <div class="form-group">
+                          <label for="telefone">Telefone</label>
+                          <input type="text" name="phone" class="form-control" placeholder="Telefone...">
+                    </div>
+              </div>
 
             	<div class="col-lg-6 col-sm-6 col-xs-12">
             		<div class="form-group">

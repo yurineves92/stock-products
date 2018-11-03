@@ -48,7 +48,7 @@
                         <label>Categoria</label>
                         <select name="category_id" class="form-control">
                               @foreach($categories as $c)
-                                    @if($c->id = $product->category_id)
+                                    @if($c->id == $product->category_id)
                                           <option value="{{$c->id}}" selected>{{$c->name}}</option>
                                     @else
                                           <option value="{{$c->id}}">{{$c->name}}</option>

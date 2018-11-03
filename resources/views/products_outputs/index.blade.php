@@ -51,7 +51,7 @@
 							@include('products_outputs.type_movement')
 							<td>{{ $p->note}}</td>
 							<td>{{ $p->client->name}}</td>
-							<td>{{ $p->date_output}}</td>
+							<td>{{ date('d/m/Y', strtotime($p->date_output)) }}</td>
 							<td>
 								<a href="{{URL::action('ProductsOutputsController@edit',$p->id)}}"><button class="btn btn-info">Editar</button></a>
 		                         <a href="" data-target="#modal-delete-{{$p->id}}" data-toggle="modal"><button class="btn btn-danger">Excluir</button></a>

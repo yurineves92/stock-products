@@ -1,6 +1,6 @@
 <div class="modal fade modal-slide-in-right" aria-hidden="true"
-role="dialog" tabindex="-1" id="modal-delete-{{$p->id}}">
-	{{Form::Open(array('action'=>array('ProductsEntriesController@destroy',$p->id),'method'=>'delete'))}}
+role="dialog" tabindex="-1" id="modal-delete-{{$u->id}}">
+	{{Form::Open(array('action'=>array('UserController@destroy',$u->id),'method'=>'delete'))}}
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -8,10 +8,10 @@ role="dialog" tabindex="-1" id="modal-delete-{{$p->id}}">
 				aria-label="Close">
                      <span aria-hidden="true">×</span>
                 </button>
-                <h4 class="modal-title">Apagar entrada de produto?</h4>
+                <h4 class="modal-title">Apagar Usuário</h4>
 			</div>
 			<div class="modal-body">
-				<p>Confirme se deseja apagar a entrada de produto: #<h2>{{$p->id}}</h2> </p>
+				<p>Confirme se deseja apagar a usuário: {{$u->name}}</p>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>

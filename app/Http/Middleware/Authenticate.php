@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
+use Session;
 
 class Authenticate extends Middleware
 {
@@ -14,6 +15,8 @@ class Authenticate extends Middleware
      */
     protected function redirectTo($request)
     {
-        return route('login');
+        $this->redirectTo = '/login';
+        Session::flash('alert-danger', 'Você não pode acessar essa área!');
+        return $this->redirectTo;
     }
 }

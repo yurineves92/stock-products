@@ -57,7 +57,7 @@
               <!-- The user image in the navbar-->
               <img src="/../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Yuri Neves</span>
+              <span class="hidden-xs">{{Auth::user()->name}}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
@@ -65,8 +65,8 @@
                 <img src="/../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Yuri do Valle Neves
-                  <small>Membro desde 19/12/2017</small>
+                  {{Auth::user()->name}}
+                  <small>Membro desde {{Auth::user()->created_at}}</small>
                 </p>
               </li>
               <!-- Menu Footer-->
@@ -96,7 +96,7 @@
           <img src="/../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Yuri do Valle Neves</p>
+          <p>{{Auth::user()->name}}</p>
           <!-- Status -->
           <a href="#"><i class="fa fa-circle text-success"></i> Administrador</a>
         </div>
@@ -159,17 +159,12 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="/users"><i class="fa fa-circle-o"></i> Listagem</a></li>
-            <li><a href="/user/add"><i class="fa fa-circle-o"></i> Novo Usuário</a></li>
+            <li><a href="/users/create"><i class="fa fa-circle-o"></i> Novo Usuário</a></li>
           </ul>
         </li>
         <li>
           <a href="/contact">
             <i class="fa fa-question-circle"></i> <span>Contato</span>
-          </a>
-        </li>
-        <li>
-          <a href="/contact">
-            <i class="fa fa-group"></i> <span>Suporte</span>
           </a>
         </li>
         <li>

@@ -51,7 +51,7 @@
               <strong>{{ $message }}</strong>
       </div>
       @endif
-    <form action="/authenticate" method="post">
+    <form method="POST" action="/authenticate" aria-label="{{ __('Register') }}">
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
       <div class="form-group has-feedback">
         <input type="email" class="form-control" name="email" placeholder="Email">
@@ -62,21 +62,13 @@
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
-        <div class="col-xs-8">
-          <div class="checkbox icheck">
-            <label>
-              <input type="checkbox"> Lembrar
-            </label>
-          </div>
-        </div>
         <!-- /.col -->
         <div class="col-xs-4">
           <button type="submit" class="btn btn-primary btn-block btn-flat">Acessar</button>
         </div>
         <!-- /.col -->
       </div>
-    </form>
-    <a href="/forgot/password">Esqueci minha senha</a><br>
+    </form>   
     <a href="/register" class="text-center">Registrar</a>
 
   </div>
@@ -88,16 +80,6 @@
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- iCheck -->
-<script src="../../plugins/iCheck/icheck.min.js"></script>
-<script>
-  $(function () {
-    $('input').iCheck({
-      checkboxClass: 'icheckbox_square-blue',
-      radioClass: 'iradio_square-blue',
-      increaseArea: '20%' /* optional */
-    });
-  });
-</script>
+
 </body>
 </html>

@@ -7,7 +7,8 @@
                   <h3 class="box-title">Relatório de saída de produtos</b></h3>
       	</div>
       <div class="box-body">
-      	<form action="/pdf/products_outputs" method="GET">
+      	<form action="/pdf/products_outputs" method="POST" target="_blank">
+            {{Form::token()}}
 	     	<div class="row">
             	<div class="col-lg-4 col-sm-4 col-xs-12">
             		<div class="form-group">

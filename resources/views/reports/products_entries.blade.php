@@ -3,11 +3,11 @@
 @section('content')
 <section class="content">
 	<div class="box box-default">
-	<div class="box-header with-border">
-            <h3 class="box-title">Relatório de entradas de produtos</b></h3>
-	</div>
+      	<div class="box-header with-border">
+                  <h3 class="box-title">Relatório de entradas de produtos</b></h3>
+      	</div>
       <div class="box-body">
-      	<form action="/pdf/products_entries" method="POST">
+      	<form action="/pdf/products_entries" method="POST" target="_blank">
             {{Form::token()}}
 	     	<div class="row">
             	<div class="col-lg-4 col-sm-4 col-xs-12">

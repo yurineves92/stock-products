@@ -45,7 +45,8 @@
             	<div class="col-lg-6 col-sm-6 col-xs-12">
             		<div class="form-group">
             		<label>Categoria</label>
-            		<select name="category_id" class="form-control">
+            		<select name="category_id" class="form-control" required="Selecione...">
+                  <option disabled selected>Selecione...</option>
 	            		@foreach($categories as $c)
 	            		<option value="{{$c->id}}">
 	            		{{$c->name}}

@@ -30,7 +30,7 @@
 <body class="hold-transition register-page">
 <div class="register-box">
   <div class="register-logo">
-    <a href="wwww.engrene.com.br" target="_blank"><b>Estoque</b>/SIMPLES</a>
+    <a href="#" target="_blank"><b>Estoque</b>/SIMPLES</a>
   </div>
 
   <div class="register-box-body">
@@ -46,41 +46,35 @@
               <strong>{{ $message }}</strong>
       </div>
       @endif
-    <form action="/create" method="POST">
-      <input type="hidden" name="_token" value="{{ csrf_token() }}">
-      <div class="form-group has-feedback">
-        <input type="text" class="form-control" name="name" placeholder="Nome completo">
-        <span class="glyphicon glyphicon-user form-control-feedback"></span>
-      </div>
-      <div class="form-group has-feedback">
-        <input type="email" class="form-control" name="email" placeholder="Email">
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-      </div>
-      <div class="form-group has-feedback">
-        <input type="password" class="form-control" name="password" placeholder="Senha">
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-      </div>
-      <div class="form-group has-feedback">
-        <input type="password" class="form-control" name="remember_password" placeholder="Repetir a senha">
-        <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
-      </div>
-      <div class="row">
-        <div class="col-xs-8">
-          <div class="checkbox icheck">
-            <label>
-              <input type="checkbox"> Aceito os <a href="#">termos</a>
-            </label>
+      <form method="POST" action="/user/store" aria-label="{{ __('Register') }}">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <input type="hidden" name="status" value="1">
+        <div class="form-group has-feedback">
+          <input type="text" class="form-control" name="name" placeholder="Nome completo">
+          <span class="glyphicon glyphicon-user form-control-feedback"></span>
+        </div>
+        <div class="form-group has-feedback">
+          <input type="email" class="form-control" name="email" placeholder="Email">
+          <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        </div>
+        <div class="form-group has-feedback">
+          <input type="password" class="form-control" name="password" placeholder="Senha">
+          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        </div>
+        <div class="form-group has-feedback">
+          <input type="password" class="form-control" name="remember_password" placeholder="Repetir a senha">
+          <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+        </div>
+        <div class="row">
+          <!-- /.col -->
+          <div class="col-xs-4">
+            <button type="submit" class="btn btn-primary btn-block btn-flat">Registrar</button>
           </div>
+          <!-- /.col -->
         </div>
-        <!-- /.col -->
-        <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Registrar</button>
-        </div>
-        <!-- /.col -->
-      </div>
-    </form>
+      </form>
 
-    <a href="login.html" class="text-center">Já possui uma conta?</a>
+    <a href="/login" class="text-center">Já possui uma conta?</a>
   </div>
   <!-- /.form-box -->
 </div>
@@ -90,16 +84,6 @@
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- iCheck -->
-<script src="../../plugins/iCheck/icheck.min.js"></script>
-<script>
-  $(function () {
-    $('input').iCheck({
-      checkboxClass: 'icheckbox_square-blue',
-      radioClass: 'iradio_square-blue',
-      increaseArea: '20%' /* optional */
-    });
-  });
-</script>
+
 </body>
 </html>

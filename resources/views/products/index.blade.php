@@ -12,7 +12,7 @@
 	<div class="row">
 		<div class="box-header with-border">
 			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-				<h3>Lista de Produtos <a href="products/create"><button class="btn btn-primary">Novo</button></a></h3>
+				<h3>Lista de Produtos <a href="products/create" class="btn btn-primary">Novo</a></h3>
 				@include('products.search')
 			</div>
 		</div>
@@ -60,7 +60,9 @@
 						@endforeach
 					</table>
 				</div>
-				{{$products->render()}}
+				<div class="text-center">
+					{{$products->render()}}	
+				</div>
 			</div>
 		</div>
 	</div>

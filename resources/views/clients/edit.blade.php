@@ -32,8 +32,8 @@
                   </div>
             </div>
 
-	     {!!Form::model($client, ['method'=>'PATCH', 'route'=>['suppliers.update', $client->id]])!!}
-	     {{Form::token()}}
+	         {!!Form::model($client, ['method'=>'PATCH', 'route'=>['clients.update', $client->id]])!!}
+	         {{Form::token()}}
 
             <div class="row">
                   <div class="col-lg-6 col-sm-6 col-xs-12">
