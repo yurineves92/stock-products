@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CategoriesRequest;
 use App\Categories;
 use Session;
 use Request;
@@ -19,8 +20,8 @@ class CategoriesController extends Controller
     public function create(){
     	return view('categories.create');
     }
-    public function store(){
-    	$params = Request::all();
+    public function store(CategoriesRequest $request){
+    	$params = $request->all();
     	$category = new Categories($params);
     	$category->save();
     	Session::flash('alert-success', 'Categoria criada com sucesso!');
@@ -31,8 +32,8 @@ class CategoriesController extends Controller
     	return view("categories.edit", ["category"=>Categories::findOrFail($id)]);
     }
 
-    public function update($id){
-        $params = Request::all();
+    public function update(CategoriesRequest $request,$id){
+        $params = $request->all();
     	$category = Categories::findOrFail($id);
     	$category->update($params);
     	Session::flash('alert-success', 'Categoria atualizada com sucesso!');

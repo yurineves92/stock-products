@@ -22,7 +22,7 @@
 		@if ($message = Session::get('alert-success'))
 	      	<div class="alert alert-success alert-block">
 	        	<button type="button" class="close" data-dismiss="alert">X</button> 
-	            	<strong>{{ $message }}</strong>
+	            <strong>{{ $message }}</strong>
 	      	</div>
 	    @elseif ($message = Session::get('alert-danger'))
 	      	<div class="alert alert-danger alert-block">

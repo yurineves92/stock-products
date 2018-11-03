@@ -31,11 +31,18 @@ Agora só criar o usuário e acessar o sistema.
 * Formulário de contato para enviar email.
 * Migrações para controle da estrutura do banco de dados.
 
+### Usuário
+
+```
+Nome, Email, Senha e Status
+```
+
 ### Clientes
 
 ```
 Nome, Email, Telefone, Endereço e CPF
 ```
+
 ### Fornecedores
 
 ```

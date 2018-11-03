@@ -22,6 +22,7 @@
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 					@if (count($errors)>0)
 					<div class="alert alert-danger">
+						<button type="button" class="close" data-dismiss="alert">X</button>
 						<ul>
 						@foreach ($errors->all() as $error)
 							<li>{{$error}}</li>
