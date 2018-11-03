@@ -58,7 +58,7 @@ class ReportsController extends Controller
     public function pdf_suppliers(){
         $params = Request::all();
         $supplier = Suppliers::find($params['supplier_id']);
-        $products = ProductsEntries::where('date_entry', '>=', $params['date_initial'])->where('date_entry', '<=', $params['date_final'])->orWhere('supplier_id','=',$params['supplier_id'])->get();
+        $products = ProductsEntries::where('date_entry', '>=', $params['date_initial'])->where('date_entry', '<=', $params['date_final'])->where('supplier_id','=',$params['supplier_id'])->get();
         $date = date('Y-m-d H:i:s');
         $pdf = PDF::loadView('pdf.suppliers',compact('products','date','supplier'));
         return $pdf->stream();

@@ -16,7 +16,7 @@
 
 </style>
 <div>
-  <h2 class="text-center">Relatório de Produtos por Fornecedor</h2>
+  <h2 class="text-center">Relatório de Entrada de Produtos por Fornecedor</h2>
   <h4 class="text-center"><p>Relatório tirado no dia: {{ date('d/m/Y', strtotime($date)) }} </p></h4>
   <h4 class="text-center"><p>Fornecedor: {{ $supplier->name }} </p></h4>
   <hr/>
@@ -38,7 +38,7 @@
         <td>{{ $p->id}}</td>
         <td>{{ $p->product->name}}</td>
         <td>{{ $p->note}}</td>
-        <td>{{ $p->date_entry }}</td>
+        <td>{{ date('d/m/Y', strtotime($p->date_entry)) }}</td>
         <td>{{ $p->amount}}</td>
       </tr>
       @endforeach

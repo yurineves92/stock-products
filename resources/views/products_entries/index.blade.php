@@ -53,15 +53,17 @@
 							<td>{{ $p->supplier->name}}</td>
 							<td>{{ date('d/m/Y', strtotime($p->date_entry)) }}</td>
 							<td>
-								<a href="{{URL::action('ProductsEntriesController@edit',$p->id)}}"><button class="btn btn-info">Editar</button></a>
-		                         <a href="" data-target="#modal-delete-{{$p->id}}" data-toggle="modal"><button class="btn btn-danger">Excluir</button></a>
+								<a href="{{URL::action('ProductsEntriesController@edit',$p->id)}}"><button class="btn btn-info"><i class="fa fa-pencil"></i></button></a>
+		                         <a href="" data-target="#modal-delete-{{$p->id}}" data-toggle="modal"><button class="btn btn-danger"><i class="fa fa-trash"></i></button></a>
 							</td>
 						</tr>
 						@include('products_entries.modal')
 						@endforeach
 					</table>
 				</div>
-				{{$products_entries->render()}}
+				<div class="text-center">
+				{{$products_entries->render()}}	
+				</div>
 			</div>
 		</div>
 	</div>

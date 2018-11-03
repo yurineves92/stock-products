@@ -48,8 +48,8 @@
 							<td>{{ $u->email}}</td>
 							<td>{{ $u->status}}</td>
 							<td>
-								<a href="{{URL::action('UserController@edit',$u->id)}}"><button class="btn btn-info">Editar</button></a>
-		                         <a href="" data-target="#modal-delete-{{$u->id}}" data-toggle="modal"><button class="btn btn-danger">Excluir</button></a>
+								<a href="{{URL::action('UserController@edit',$u->id)}}"><button class="btn btn-info"><i class="fa fa-pencil"></i></button></a>
+		                         <a href="" data-target="#modal-delete-{{$u->id}}" data-toggle="modal"><button class="btn btn-danger"><i class="fa fa-trash"></i></button></a>
 							</td>
 						</tr>
 						@include('users.modal')

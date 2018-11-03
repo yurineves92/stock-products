@@ -27,7 +27,7 @@
         <th>ID</th>
         <th>Produto</th>
         <th>Descrição</th>
-        <th>Fornecedor</th>
+        <th>Cliente</th>
         <th>Data de Saída</th>
         <th>Quantidade</th>
       </tr>
@@ -39,7 +39,7 @@
         <td>{{ $p->product->name}}</td>
         <td>{{ $p->note}}</td>
         <td>{{ $p->client->name}}</td>
-        <td>{{ $p->date_output }}</td>
+        <td>{{ date('d/m/Y', strtotime($p->date_output)) }}</td>
         <td>{{ $p->amount}}</td>
       </tr>
       @endforeach

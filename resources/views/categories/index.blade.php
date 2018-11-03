@@ -44,8 +44,8 @@
 							<td>{{ $c->id}}</td>
 							<td>{{ $c->name}}</td>
 							<td>
-								<a href="{{URL::action('CategoriesController@edit',$c->id)}}"><button class="btn btn-info">Editar</button></a>
-		                         <a href="" data-target="#modal-delete-{{$c->id}}" data-toggle="modal"><button class="btn btn-danger">Excluir</button></a>
+								<a href="{{URL::action('CategoriesController@edit',$c->id)}}"><button class="btn btn-info"><i class="fa fa-pencil"></i></button></a>
+		                         <a href="" data-target="#modal-delete-{{$c->id}}" data-toggle="modal"><button class="btn btn-danger"><i class="fa fa-trash"></i></button></a>
 							</td>
 						</tr>
 						@include('categories.modal')

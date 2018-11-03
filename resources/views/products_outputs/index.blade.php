@@ -53,15 +53,17 @@
 							<td>{{ $p->client->name}}</td>
 							<td>{{ date('d/m/Y', strtotime($p->date_output)) }}</td>
 							<td>
-								<a href="{{URL::action('ProductsOutputsController@edit',$p->id)}}"><button class="btn btn-info">Editar</button></a>
-		                         <a href="" data-target="#modal-delete-{{$p->id}}" data-toggle="modal"><button class="btn btn-danger">Excluir</button></a>
+								<a href="{{URL::action('ProductsOutputsController@edit',$p->id)}}"><button class="btn btn-info"><i class="fa fa-pencil"></i></button></a>
+		                         <a href="" data-target="#modal-delete-{{$p->id}}" data-toggle="modal"><button class="btn btn-danger"><i class="fa fa-trash"></i></button></a>
 							</td>
 						</tr>
 						@include('products_outputs.modal')
 						@endforeach
 					</table>
 				</div>
+				<div class="text-center">
 				{{$products_outputs->render()}}
+				</div>
 			</div>
 		</div>
 	</div>

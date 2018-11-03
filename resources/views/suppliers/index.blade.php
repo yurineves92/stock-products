@@ -51,8 +51,8 @@
 							<td>{{ $s->address}}</td>
 							<td>{{ $s->cnpj}}</td>
 							<td>
-								<a href="{{URL::action('SuppliersController@edit',$s->id)}}"><button class="btn btn-info">Editar</button></a>
-		                         <a href="" data-target="#modal-delete-{{$s->id}}" data-toggle="modal"><button class="btn btn-danger">Excluir</button></a>
+								<a href="{{URL::action('SuppliersController@edit',$s->id)}}"><button class="btn btn-info"><i class="fa fa-pencil"></i></button></a>
+		                         <a href="" data-target="#modal-delete-{{$s->id}}" data-toggle="modal"><button class="btn btn-danger"><i class="fa fa-trash"></i></button></a>
 							</td>
 						</tr>
 						@include('suppliers.modal')

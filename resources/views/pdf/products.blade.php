@@ -13,16 +13,15 @@
   th {
       height: 25px;
   }
-
 </style>
 <div>
-  <h2 class="text-center">Lista de Produtos</h2>
-  <h4 class="text-center"><p>Relatório tirado no dia: {{ date('d/m/Y', strtotime($date)) }} </p></h4>
-  @if(!empty($category))
-  <h4 class="text-center"><p>Categoria: {{ $category->name }} </p></h4>
-  @else
-  <h4 class="text-center"><p>Todos os produtos</p></h4>
-  @endif
+    <h2 class="text-center">Lista de Produtos</h2>
+    <h4 class="text-center"><p>Relatório tirado no dia: {{ date('d/m/Y', strtotime($date)) }} </p></h4>
+    @if(!empty($category))
+    <h4 class="text-center"><p>Categoria: {{ $category->name }} </p></h4>
+    @else
+    <h4 class="text-center"><p>Todos os produtos</p></h4>
+    @endif
   <hr/>
 </div>
 <div class="table-responsive">

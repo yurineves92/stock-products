@@ -11,7 +11,7 @@ role="dialog" tabindex="-1" id="modal-delete-{{$p->id}}">
                 <h4 class="modal-title">Apagar saída de produto?</h4>
 			</div>
 			<div class="modal-body">
-				<p>Confirme se deseja apagar a saída de produto: {{$p->id}} </p>
+				<p>Confirme se deseja apagar a saída de produto: #{{$p->id}} </p>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
