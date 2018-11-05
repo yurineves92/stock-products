@@ -162,6 +162,9 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         //PDF
         Barryvdh\DomPDF\ServiceProvider::class,
+        //DebugBAR
+        Barryvdh\Debugbar\ServiceProvider::class,
+
 
     ],
 
@@ -214,6 +217,8 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+
     ],
 
 ];
