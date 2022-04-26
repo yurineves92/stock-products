@@ -16,7 +16,7 @@ class CreateTableProducts extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name',100);
-            $table->integer('total_amount');
+            $table->integer('total_amount')->default('0');
             $table->integer('min_stock');
             $table->integer('max_stock');
             $table->integer('amount')->default('0');

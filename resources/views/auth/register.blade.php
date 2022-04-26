@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,28 +28,30 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition register-page">
-<div class="register-box">
-  <div class="register-logo">
-    <a href="#" target="_blank"><b>Estoque</b>/SIMPLES</a>
-  </div>
 
-  <div class="register-box-body">
-    <p class="login-box-msg">Registro de um novo usuário</p>
+<body class="hold-transition register-page">
+  <div class="register-box">
+    <div class="register-logo">
+      <a href="#" target="_blank"><b>Estoque</b>/SIMPLES</a>
+    </div>
+
+    <div class="register-box-body">
+      <p class="login-box-msg">Registro de um novo usuário</p>
       @if ($message = Session::get('alert-danger'))
       <div class="alert alert-danger alert-block">
-        <button type="button" class="close" data-dismiss="alert">×</button> 
-              <strong>{{ $message }}</strong>
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>{{ $message }}</strong>
       </div>
       @elseif ($message = Session::get('alert-info'))
       <div class="alert alert-info alert-block">
-        <button type="button" class="close" data-dismiss="alert">×</button> 
-              <strong>{{ $message }}</strong>
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>{{ $message }}</strong>
       </div>
       @endif
       <form method="POST" action="/user/store" aria-label="{{ __('Register') }}">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <input type="hidden" name="status" value="1">
+        <input type="hidden" name="type_form" value="form_login">
         <div class="form-group has-feedback">
           <input type="text" class="form-control" name="name" placeholder="Nome completo">
           <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -74,16 +77,17 @@
         </div>
       </form>
 
-    <a href="/login" class="text-center">Já possui uma conta?</a>
+      <a href="/login" class="text-center">Já possui uma conta?</a>
+    </div>
+    <!-- /.form-box -->
   </div>
-  <!-- /.form-box -->
-</div>
-<!-- /.register-box -->
+  <!-- /.register-box -->
 
-<!-- jQuery 3 -->
-<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- jQuery 3 -->
+  <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap 3.3.7 -->
+  <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>
